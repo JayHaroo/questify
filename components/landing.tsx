@@ -22,7 +22,7 @@ export default function Landing() {
             <Pressable className="z-10 top-[300px] border-black border-[3px] w-[200px] h-[60px] rounded-[20px] items-center justify-center">
                 <Text className="text-2xl font-bold">Use Local</Text>
             </Pressable>
-            <Image source={require('../assets/gradient-b.png')} className="z-0 top-[2px]"/>
+            <Image source={require('../assets/gradient-b.png')} className="z-0 bottom-10"/>
           </View>
           <StatusBar style="auto" />
         </View>
