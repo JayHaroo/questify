@@ -7,7 +7,8 @@ import './global.css';
 export default function App() {
   return (
     <View className='flex-1'>
-      <Profile />
+      {/* <Profile /> */}
+      <Landing />
       <StatusBar style='light' />
     </View>
   );
