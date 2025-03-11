@@ -26,6 +26,10 @@ export default function Profile() {
               <Text className="text-2xl decoration-2 underline">Go Back</Text>
             </Pressable>
           </View>
+          
+          <View className="rounded-3xl w-[40vh] h-[70vh] bottom-[50px] bg-[#6e6e6e] z-10">
+            {/* This will contain the quest / tasks */}
+          </View>
           <Image
             source={require("../assets/gradient-b.png")}
             className="z-0 mt-[200px] absolute"
