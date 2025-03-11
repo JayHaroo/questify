@@ -1,8 +1,10 @@
 import { View, Text, ImageBackground, Image, Pressable } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import "nativewind";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Profile() {
+  const navigation = useNavigation();
   return (
     <>
       <ImageBackground
@@ -10,13 +12,26 @@ export default function Profile() {
         className="flex-1 items-center justify-center"
       >
         <View className="flex h-[60vh] items-center justify-between">
-            <Image source={require('../assets/gradient-b.png')} className="z-0 rotate-180 mt-[-180px] absolute"/>
+          <Image
+            source={require("../assets/gradient-b.png")}
+            className="z-0 rotate-180 mt-[-180px] absolute"
+          />
+          <View className="z-10 flex flex-row items-center justify-between w-[40vh] bottom-[120px]">
             <View>
-                <Text>UserName</Text>
+             <Text>UserName</Text>
+             <Text>Level: </Text>
             </View>
-            <Image source={require('../assets/gradient-b.png')} className="z-0 mt-[200px] absolute"/>
+            
+            <Pressable onPress={() => navigation.goBack()} className="z-10">
+              <Text className="text-2xl decoration-2 underline">Go Back</Text>
+            </Pressable>
+          </View>
+          <Image
+            source={require("../assets/gradient-b.png")}
+            className="z-0 mt-[200px] absolute"
+          />
         </View>
-        <StatusBar style="auto"/>
+        <StatusBar style="auto" />
       </ImageBackground>
     </>
   );
